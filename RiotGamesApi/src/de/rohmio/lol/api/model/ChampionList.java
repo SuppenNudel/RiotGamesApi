@@ -2,6 +2,11 @@ package de.rohmio.lol.api.model;
 
 import java.util.Map;
 
+/**
+ * This object contains champion list data.
+ * @author Cedric
+ *
+ */
 public class ChampionList {
 
 	private Map<String, String> keys;

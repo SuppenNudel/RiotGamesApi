@@ -20,5 +20,8 @@ public class Config {
 	public String getApiKey() {
 		return config.getString("api-key");
 	}
+	public String getDefaultRegion() {
+		return config.getString("region");
+	}
 
 }
