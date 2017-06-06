@@ -15,7 +15,7 @@ import com.google.gson.Gson;
 
 public class RestRequestor {
 
-	private static Gson gson = new Gson();
+	private final static Gson gson = new Gson();
 
 	public static <T> T restRequestGet(URI uri, Type type) throws Exception {
 		CloseableHttpClient httpClient = HttpClients.createDefault();
@@ -23,12 +23,12 @@ public class RestRequestor {
 		CloseableHttpResponse response = httpClient.execute(httpget);
 
 		StatusLine statusLine = response.getStatusLine();
-		System.out.println(statusLine.toString()+" - "+uri);
+		System.out.println(statusLine.toString() + " - " + uri);
 		RestRequestor.statusLine(statusLine);
 
 		HttpEntity entity = response.getEntity();
 		InputStreamReader reader = new InputStreamReader(entity.getContent());
-		switch(statusLine.getStatusCode()) {
+		switch (statusLine.getStatusCode()) {
 		case 200:
 			T fromJson = RestRequestor.gson.fromJson(reader, type);
 			response.close();

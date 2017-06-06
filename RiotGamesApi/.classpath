@@ -12,5 +12,7 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/apache/httpclient/httpclient-4.5.3.jar"/>
 	<classpathentry kind="lib" path="lib/apache/httpclient/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="lib/apache/httpclient/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/apache/httpclient/commons-codec-1.9.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
